@@ -48,6 +48,8 @@ public class Activity_favourite extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent i = new Intent(getApplicationContext(),Settings.class);
+            startActivity(i);
             return true;
         }
         if(id == R.id.home){

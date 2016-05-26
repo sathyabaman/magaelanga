@@ -26,9 +26,14 @@
         <activity
             android:name=".Houses"
             android:label="@string/title_activity_houses"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".AddNewLocation"
-            android:label="@string/title_activity_add_new_location"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddNewLocation"
+            android:label="@string/title_activity_add_new_location" />
+        <activity
+            android:name=".Settings"
+            android:label="@string/settings">
+        </activity>
     </application>
 
 </manifest>

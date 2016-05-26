@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -64,12 +65,22 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent i = new Intent(getApplicationContext(),Settings.class);
+            startActivity(i);
+            return true;
+        }
+        if(id == R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+        }
+
+        //noinspection SimplifiableIfStatement
         if (id == R.id.favorite){
             Intent i = new Intent(getApplicationContext(),Activity_favourite.class);
             startActivity(i);
             return true;
         }
-
+        //noinspection SimplifiableIfStatement
         if (id == R.id.addNewLocation){
             Intent i = new Intent(getApplicationContext(),AddNewLocation.class);
             startActivity(i);
