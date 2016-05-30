@@ -51,8 +51,6 @@ public class VivzAdapter extends RecyclerView.Adapter<VivzAdapter.MyViewHolder> 
         Information current = data.get(position);
         holder.title.setText(current.title);
         holder.icon.setImageResource(current.iconId);
-
-
     }
 
     @Override
@@ -77,7 +75,6 @@ public class VivzAdapter extends RecyclerView.Adapter<VivzAdapter.MyViewHolder> 
         public void onClick(View v) {
            // Toast.makeText(v.getContext(), "Clicked position : "+getPosition(), Toast.LENGTH_SHORT).show();
            // delete(getPosition());
-
            // context.startActivities(new Intent[]{new Intent(context, Houses.class)});
 
             if(clicklistner != null){
@@ -88,6 +85,5 @@ public class VivzAdapter extends RecyclerView.Adapter<VivzAdapter.MyViewHolder> 
 
     public interface ClickListener{
         public void itemClicked(View view, int position);
-
     }
 }

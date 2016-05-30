@@ -1,8 +1,6 @@
 package baman.lankahomes.lk.magaelanga;
 
 
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +64,7 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
     public static List<Information> getData(){
         if(data.size() ==0){
             int[] icons = {
+                    R.drawable.search,
                     R.drawable.atm,
                     R.drawable.bank,
                     R.drawable.bar,
@@ -79,6 +77,7 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
                     R.drawable.clothing_store,
                     R.drawable.departmental_store,
                     R.drawable.electronic_store,
+                    R.drawable.fitness_center,
                     R.drawable.florist,
                     R.drawable.gas_station,
                     R.drawable.hindu_temple,
@@ -99,13 +98,14 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
                     R.drawable.shopping_mall,
                     R.drawable.spa,
                     R.drawable.university,
-                    R.drawable.zoo,};
+                    R.drawable.zoo,
+                    R.drawable.add_new_location,};
 
-            String[] titles = {"ATM","Bank","Bar","Beauty Saloon", "Book Store","Buddhist Temple",
+            String[] titles = {"Search", "ATM","Bank","Bar","Beauty Saloon", "Book Store","Buddhist Temple",
                     "Bus Station","Cafe","Church","clothing Store", "Departmental Store", "Electronic Store",
-                    "Florist", "Gas Station", "Hindu Temples", "Hospitals", "Hotels", "Library", "liquor Store",
+                    "Fitness Center", "Florist", "Gas Station", "Hindu Temples", "Hospitals", "Hotels", "Library", "liquor Store",
                     "Mosque", "Movie Theatre", "Museum", "Night Club", "Park", "Pharmacy", "Police Station",
-                    "Post Office", "Restaurant", "School", "Shopping Mall", "Spa", "University", "Zoo",};
+                    "Post Office", "Restaurant", "School", "Shopping Mall", "Spa", "University", "Zoo", "Add New Location",};
 
             for (int k=0; k < icons.length && k < titles.length; k++){
                 Information current = new Information();
@@ -180,142 +180,26 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
     @Override
     public void itemClicked(View view, int position) {
 
-        Toast.makeText(getActivity(), "pisition"+ Integer.toString(position)+" view id :"+ String.valueOf(data.get(position).getTitle()),
-                Toast.LENGTH_LONG).show();
+//        Toast.makeText(getActivity(), "pisition"+ Integer.toString(position)+" view id :"+ String.valueOf(data.get(position).getTitle()),
+//                Toast.LENGTH_LONG).show();
 
         String clicked = String.valueOf(data.get(position).getTitle());
         Intent intent = new Intent(getActivity(), Houses.class);
 
         switch (clicked){
-            case "ATM":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
+            case "Search":
+                Intent intent2 = new Intent(getActivity(), MainActivity.class);
+                intent2.putExtra("activity_title", clicked);
+                startActivity(intent2);
                 break;
-            case "Bank":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Bar":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Beauty Saloon":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Book Store":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Buddhist Temple":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Bus Station":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Cafe":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Church":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "clothing Store":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Departmental Store":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Electronic Store":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Florist":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Gas Station":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Hindu Temples":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Hospitals":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Hotels":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Library":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "liquor Store":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Mosque":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Movie Theatre":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Night Club":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Park":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Pharmacy":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Police Station":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Post Office":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Restaurant":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "School":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Shopping Mall":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Spa":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "University":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
-                break;
-            case "Zoo":
-                intent.putExtra("activity_title", clicked);
-                startActivity(intent);
+            case "Add New Location":
+                Intent intent3 = new Intent(getActivity(), AddNewLocation.class);
+                intent3.putExtra("activity_title", clicked);
+                startActivity(intent3);
                 break;
             default:
+                intent.putExtra("activity_title", clicked);
+                startActivity(intent);
                 break;
         }
 

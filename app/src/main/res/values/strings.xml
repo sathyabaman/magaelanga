@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Magae Langa</string>
+    <string name="app_name">Dol Dappi</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -23,6 +23,7 @@
         <item>TAB 3</item>
     </string-array>
     <string name="title_activity_add_new_location">Add New Location</string>
+    <string name="search">Search</string>
 
 
 </resources>
