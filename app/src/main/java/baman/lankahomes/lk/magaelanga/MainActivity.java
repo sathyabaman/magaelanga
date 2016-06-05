@@ -18,18 +18,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 
 
 public class MainActivity extends ActionBarActivity {
+    Button search_now;
     private Toolbar toolbar;
     public DrawerLayout drawerLayout;
     public ListView drawerList;
     private navigationDrawerFragment drawerFragment;
-
-
 
 
     @Override
@@ -46,6 +46,13 @@ public class MainActivity extends ActionBarActivity {
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setup(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
 
+        search_now = (Button) findViewById(R.id.btn_search_now);
+        search_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SearchResults.class));
+            }
+        });
 
     }
 

@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="@string/search"
-                android:id="@+id/button2"
+                android:id="@+id/btn_search_now"
                 android:textStyle="bold"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"

@@ -1,0 +1,44 @@
+[1mdiff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml[m
+[1mindex 33ddb9e..d3708db 100644[m
+[1m--- a/app/src/main/AndroidManifest.xml[m
+[1m+++ b/app/src/main/AndroidManifest.xml[m
+[36m@@ -19,7 +19,7 @@[m
+         <activity[m
+             android:name=".MainActivity"[m
+             android:label="@string/app_name"[m
+[31m-            android:launchMode="singleInstance"></activity>[m
+[32m+[m[32m            android:launchMode="singleInstance" />[m
+         <activity[m
+             android:name=".Activity_favourite"[m
+             android:label="@string/title_activity_activity_favourite">[m
+[36m@@ -39,7 +39,8 @@[m
+             android:name=".Settings"[m
+             android:label="@string/settings"[m
+             android:launchMode="singleInstance" />[m
+[31m-        <activity android:name=".SignUp"></activity>[m
+[32m+[m[32m        <activity android:name=".SignUp" />[m
+[32m+[m[32m        <activity android:name=".SearchResults"></activity>[m
+     </application>[m
+ [m
+ </manifest>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/activity_search_results.xml b/app/src/main/res/layout/activity_search_results.xml[m
+[1mindex d6978d7..fc1dad6 100644[m
+[1m--- a/app/src/main/res/layout/activity_search_results.xml[m
+[1m+++ b/app/src/main/res/layout/activity_search_results.xml[m
+[36m@@ -1,13 +1,12 @@[m
+ <?xml version="1.0" encoding="utf-8"?>[m
+[31m-<RelativeLayout[m
+[31m-    xmlns:android="http://schemas.android.com/apk/res/android"[m
+[32m+[m[32m<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"[m
+     xmlns:tools="http://schemas.android.com/tools"[m
+     android:layout_width="match_parent"[m
+     android:layout_height="match_parent"[m
+[32m+[m[32m    android:paddingBottom="@dimen/activity_vertical_margin"[m
+     android:paddingLeft="@dimen/activity_horizontal_margin"[m
+     android:paddingRight="@dimen/activity_horizontal_margin"[m
+     android:paddingTop="@dimen/activity_vertical_margin"[m
+[31m-    android:paddingBottom="@dimen/activity_vertical_margin"[m
+     tools:context="baman.lankahomes.lk.magaelanga.SearchResults">[m
+ [m
+ </RelativeLayout>[m
