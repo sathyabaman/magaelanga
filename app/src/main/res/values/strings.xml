@@ -9,12 +9,18 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lankahomes_frag_title">Lankahomes.lk</string>
     <string name="title_activity_houses">Houses</string>
     <string name="addNew">Add New</string>
+    <string name="title_activity_add_new_location">Add New Location</string>
+    <string name="search">Search Now</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or">OR</string>
+    <string name="password">Enter Password</string>
+    <string name="email_address">Email Address</string>
+
 
 
     <string-array name="tabs">
@@ -22,8 +28,147 @@
         <item>TAB 2</item>
         <item>TAB 3</item>
     </string-array>
-    <string name="title_activity_add_new_location">Add New Location</string>
-    <string name="search">Search</string>
+
+
+    <string-array name="spinner_place_type">
+        <item> ATM </item>
+        <item> Bank </item>
+        <item> Bar </item>
+        <item> Beauty Saloon </item>
+        <item> Book Store </item>
+        <item> Buddhist Temple </item>
+        <item> Bus Station </item>
+        <item> Cafe </item>
+        <item> Church </item>
+        <item> clothing Store </item>
+        <item> Departmental Store </item>
+        <item> Electronic Store </item>
+        <item> Fitness Center </item>
+        <item> Florist </item>
+        <item> Gas Station </item>
+        <item> Hindu Temples </item>
+        <item> Hospitals </item>
+        <item> Hotels </item>
+        <item> Library </item>
+        <item> liquor Store </item>
+        <item> Mosque </item>
+        <item> Movie Theatre </item>
+        <item> Museum </item>
+        <item> Night Club </item>
+        <item> Park </item>
+        <item> Pharmacy </item>
+        <item> Police Station </item>
+        <item> Post Office </item>
+        <item> Restaurant </item>
+        <item> School </item>
+        <item> Shopping Mall </item>
+        <item> Spa </item>
+        <item> University </item>
+        <item> Zoo </item>
+    </string-array>
+
+    <string-array name="Distance_Radius">
+        <item> 1 KM </item>
+        <item> 2 KM </item>
+        <item> 3 KM </item>
+        <item> 4 KM </item>
+        <item> 5 KM </item>
+        <item> 6 KM </item>
+        <item> 7 KM </item>
+        <item> 8 KM </item>
+        <item> 9 KM </item>
+        <item> 10 KM </item>
+        <item> 11 KM </item>
+        <item> 12 KM </item>
+        <item> 13 KM </item>
+        <item> 14 KM </item>
+        <item> 15 KM </item>
+        <item> 16 KM </item>
+        <item> 17 KM </item>
+        <item> 18 KM </item>
+        <item> 19 KM </item>
+        <item> 20 KM </item>
+        <item> 21 KM </item>
+        <item> 22 KM </item>
+        <item> 23 KM </item>
+        <item> 24 KM </item>
+        <item> 25 KM </item>
+        <item> 26 KM </item>
+        <item> 27 KM </item>
+        <item> 28 KM </item>
+        <item> 29 KM </item>
+        <item> 30 KM </item>
+        <item> 31 KM </item>
+        <item> 32 KM </item>
+        <item> 33 KM </item>
+        <item> 34 KM </item>
+        <item> 35 KM </item>
+        <item> 36 KM </item>
+        <item> 37 KM </item>
+        <item> 38 KM </item>
+        <item> 39 KM </item>
+        <item> 40 KM </item>
+        <item> 41 KM </item>
+        <item> 42 KM </item>
+        <item> 43 KM </item>
+        <item> 44 KM </item>
+        <item> 45 KM </item>
+        <item> 46 KM </item>
+        <item> 47 KM </item>
+        <item> 48 KM </item>
+        <item> 49 KM </item>
+        <item> 50 KM </item>
+        <item> 51 KM </item>
+        <item> 52 KM </item>
+        <item> 53 KM </item>
+        <item> 54 KM </item>
+        <item> 55 KM </item>
+        <item> 56 KM </item>
+        <item> 57 KM </item>
+        <item> 58 KM </item>
+        <item> 59 KM </item>
+        <item> 60 KM </item>
+        <item> 61 KM </item>
+        <item> 62 KM </item>
+        <item> 63 KM </item>
+        <item> 64 KM </item>
+        <item> 65 KM </item>
+        <item> 66 KM </item>
+        <item> 67 KM </item>
+        <item> 68 KM </item>
+        <item> 69 KM </item>
+        <item> 70 KM </item>
+        <item> 71 KM </item>
+        <item> 72 KM </item>
+        <item> 73 KM </item>
+        <item> 74 KM </item>
+        <item> 75 KM </item>
+        <item> 76 KM </item>
+        <item> 77 KM </item>
+        <item> 78 KM </item>
+        <item> 79 KM </item>
+        <item> 80 KM </item>
+        <item> 81 KM </item>
+        <item> 82 KM </item>
+        <item> 83 KM </item>
+        <item> 84 KM </item>
+        <item> 85 KM </item>
+        <item> 86 KM </item>
+        <item> 87 KM </item>
+        <item> 88 KM </item>
+        <item> 89 KM </item>
+        <item> 90 KM </item>
+        <item> 91 KM </item>
+        <item> 92 KM </item>
+        <item> 93 KM </item>
+        <item> 94 KM </item>
+        <item> 95 KM </item>
+        <item> 96 KM </item>
+        <item> 97 KM </item>
+        <item> 98 KM </item>
+        <item> 99 KM </item>
+        <item> 100 KM </item>
+    </string-array>
 
 
 </resources>
