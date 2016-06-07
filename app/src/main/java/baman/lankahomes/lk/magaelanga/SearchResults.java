@@ -50,7 +50,7 @@ public class SearchResults extends AppCompatActivity {
 
     private GridViewAdapter mGridAdapter;
     private ArrayList<GridItem> mGridData;
-    private String FEED_URL = "http://192.168.1.5/content_db_getAllMovies.php";
+    private String FEED_URL = "http://172.16.110.18/content_db_getAllMovies.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,9 +174,11 @@ public class SearchResults extends AppCompatActivity {
                 String id = mJsonObject.getString("id");
                 String name = mJsonObject.getString("name");
                 String image = mJsonObject.getString("image");
+                String distance = "5.6 KM";
 
                 item.setId(id);
                 item.setTitle(name);
+                item.setDistance(distance);
                 if(image !=null)
                     item.setImage(image);
                 mGridData.add(item);

@@ -64,7 +64,6 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
     public static List<Information> getData(){
         if(data.size() ==0){
             int[] icons = {
-                    R.drawable.search,
                     R.drawable.atm,
                     R.drawable.bank,
                     R.drawable.bar,
@@ -101,7 +100,7 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
                     R.drawable.zoo,
                     R.drawable.add_new_location,};
 
-            String[] titles = {"Search", "ATM","Bank","Bar","Beauty Saloon", "Book Store","Buddhist Temple",
+            String[] titles = {"ATM","Bank","Bar","Beauty Saloon", "Book Store","Buddhist Temple",
                     "Bus Station","Cafe","Church","clothing Store", "Departmental Store", "Electronic Store",
                     "Fitness Center", "Florist", "Gas Station", "Hindu Temples", "Hospitals", "Hotels", "Library", "liquor Store",
                     "Mosque", "Movie Theatre", "Museum", "Night Club", "Park", "Pharmacy", "Police Station",

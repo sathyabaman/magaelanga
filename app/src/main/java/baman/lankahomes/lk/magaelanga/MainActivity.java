@@ -2,6 +2,7 @@ package baman.lankahomes.lk.magaelanga;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -35,7 +36,16 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences prefs = getSharedPreferences("pathRegistration", MODE_PRIVATE);
+        boolean isloggedin = prefs.getBoolean("is_logged_in", false);
+        if(!isloggedin) {
+            startActivity(new Intent(MainActivity.this, SignIn.class));
+        }
+
         setContentView(R.layout.activity_main_appbar);
+
+
 
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);

@@ -60,6 +60,7 @@ public class GridViewAdapter extends ArrayAdapter<GridItem> {
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new ViewHolder();
             holder.titleTextView = (TextView) row.findViewById(R.id.grid_item_title);
+            holder.distanceTextView = (TextView) row.findViewById(R.id.grid_item_distance);
             holder.imageView = (ImageView) row.findViewById(R.id.grid_item_image);
             row.setTag(holder);
         } else {
@@ -68,6 +69,7 @@ public class GridViewAdapter extends ArrayAdapter<GridItem> {
 
         GridItem item = mGridData.get(position);
         holder.titleTextView.setText(Html.fromHtml(item.getTitle()));
+        holder.distanceTextView.setText(Html.fromHtml(item.getDistance()));
 
         Picasso.with(mContext).load(item.getImage()).into(holder.imageView);
         return row;
@@ -75,6 +77,7 @@ public class GridViewAdapter extends ArrayAdapter<GridItem> {
 
     static class ViewHolder {
         TextView titleTextView;
+        TextView distanceTextView;
         ImageView imageView;
     }
 }

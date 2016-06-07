@@ -8,6 +8,7 @@ public class GridItem {
     private String id;
     private String image;
     private String title;
+    private String distance;
 
     public GridItem() {
         super();
@@ -33,5 +34,13 @@ public class GridItem {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 }
