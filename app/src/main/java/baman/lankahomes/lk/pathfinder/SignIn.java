@@ -1,4 +1,4 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
 import android.content.DialogInterface;
 import android.content.Intent;

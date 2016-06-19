@@ -51,7 +51,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:layout = "@layout/fragment_navigation_drawer"
-            android:name="baman.lankahomes.lk.magaelanga.navigationDrawerFragment"
+            android:name="baman.lankahomes.lk.pathfinder.navigationDrawerFragment"
             tools:layout="@layout/fragment_navigation_drawer" />
 
 

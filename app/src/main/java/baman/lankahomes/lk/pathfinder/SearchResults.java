@@ -1,4 +1,4 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
         import java.io.BufferedReader;
         import java.io.IOException;
@@ -6,14 +6,11 @@ package baman.lankahomes.lk.magaelanga;
         import java.io.InputStreamReader;
         import java.util.ArrayList;
 
-        import android.content.DialogInterface;
         import android.content.Intent;
         import android.os.AsyncTask;
         import android.os.Bundle;
         import android.support.v4.app.NavUtils;
         import android.support.v4.widget.DrawerLayout;
-        import android.support.v7.app.ActionBarActivity;
-        import android.support.v7.app.AlertDialog;
         import android.support.v7.app.AppCompatActivity;
         import android.support.v7.widget.Toolbar;
         import android.util.Log;
@@ -22,8 +19,6 @@ package baman.lankahomes.lk.magaelanga;
         import android.view.View;
         import android.widget.AdapterView;
         import android.widget.GridView;
-        import android.widget.ImageView;
-        import android.widget.ListView;
         import android.widget.ProgressBar;
         import android.widget.Toast;
 
@@ -35,8 +30,9 @@ package baman.lankahomes.lk.magaelanga;
         import org.json.JSONException;
         import org.json.JSONObject;
 
-        import baman.lankahomes.lk.magaelanga.models.GridItem;
-        import baman.lankahomes.lk.magaelanga.models.GridViewAdapter;
+        import baman.lankahomes.lk.magaelanga.SelectCoordinates;
+        import baman.lankahomes.lk.pathfinder.models.GridItem;
+        import baman.lankahomes.lk.pathfinder.models.GridViewAdapter;
 
 public class SearchResults extends AppCompatActivity {
 
@@ -228,7 +224,7 @@ public class SearchResults extends AppCompatActivity {
         }
         //noinspection SimplifiableIfStatement
         if (id == R.id.addNewLocation){
-            Intent i = new Intent(getApplicationContext(),AddNewLocation.class);
+            Intent i = new Intent(getApplicationContext(),SelectCoordinates.class);
             startActivity(i);
             return true;
         }

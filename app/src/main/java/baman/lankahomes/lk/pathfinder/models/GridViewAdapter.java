@@ -1,4 +1,4 @@
-package baman.lankahomes.lk.magaelanga.models;
+package baman.lankahomes.lk.pathfinder.models;
 
 /**
  * Created by baman on 6/5/16.
@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +18,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import baman.lankahomes.lk.magaelanga.R;
+import baman.lankahomes.lk.pathfinder.R;
 
 /**
  * Created by baman on 6/2/16.

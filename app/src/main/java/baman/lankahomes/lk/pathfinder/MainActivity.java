@@ -1,28 +1,19 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
+import baman.lankahomes.lk.magaelanga.SelectCoordinates;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -43,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
             startActivity(new Intent(MainActivity.this, SignIn.class));
         }
 
-        setContentView(R.layout.activity_main_appbar);
+        setContentView(R.layout.activity_main_screen);
 
 
 
@@ -99,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
         }
         //noinspection SimplifiableIfStatement
         if (id == R.id.addNewLocation){
-            Intent i = new Intent(getApplicationContext(),AddNewLocation.class);
+            Intent i = new Intent(getApplicationContext(),SelectCoordinates.class);
             startActivity(i);
             return true;
         }

@@ -1,4 +1,4 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
 /**
  * Created by baman on 10/11/15.

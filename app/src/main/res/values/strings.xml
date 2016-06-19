@@ -368,6 +368,7 @@
         <item> Zambia </item>
         <item> Zimbabwe </item>
     </string-array>
+    <string name="title_activity_select_coordinates">Map</string>
 
 
 </resources>

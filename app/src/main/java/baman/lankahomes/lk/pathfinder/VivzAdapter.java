@@ -1,15 +1,12 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
 import android.content.Context;
-import android.content.Intent;
-import android.support.v7.internal.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
@@ -20,7 +17,7 @@ import java.util.List;
 public class VivzAdapter extends RecyclerView.Adapter<VivzAdapter.MyViewHolder> {
 
     private final LayoutInflater inflater;
-    List<baman.lankahomes.lk.magaelanga.Information> data = Collections.emptyList();
+    List<baman.lankahomes.lk.pathfinder.Information> data = Collections.emptyList();
     private  Context context;
     private ClickListener clicklistner;
 

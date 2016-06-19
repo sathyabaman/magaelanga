@@ -1,4 +1,4 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -43,6 +43,10 @@ public class SignUp extends ActionBarActivity {
             public void onClick(View v) {
                 if(validateInput()){
                     //need to check with the server
+
+
+                    // send data to server
+
 
                     // if success from server add to shared preferences
                     SharedPreferences pref = getApplicationContext().getSharedPreferences("pathRegistration", MODE_PRIVATE);

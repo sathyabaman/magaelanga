@@ -1,4 +1,4 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
 
 import android.content.Context;
@@ -14,9 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import baman.lankahomes.lk.magaelanga.SelectCoordinates;
 
 
 /**
@@ -192,7 +194,7 @@ public class navigationDrawerFragment extends android.support.v4.app.Fragment im
                 startActivity(intent2);
                 break;
             case "Add New Location":
-                Intent intent3 = new Intent(getActivity(), AddNewLocation.class);
+                Intent intent3 = new Intent(getActivity(), SelectCoordinates.class);
                 intent3.putExtra("activity_title", clicked);
                 startActivity(intent3);
                 break;

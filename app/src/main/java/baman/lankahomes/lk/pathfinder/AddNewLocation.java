@@ -1,20 +1,35 @@
-package baman.lankahomes.lk.magaelanga;
+package baman.lankahomes.lk.pathfinder;
 
+
+
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.NavUtils;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+        import android.support.v4.app.NavUtils;
+        import android.support.v4.widget.DrawerLayout;
+        import android.support.v7.app.ActionBarActivity;
+        import android.os.Bundle;
+        import android.support.v7.widget.Toolbar;
+        import android.view.Menu;
+        import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
-public class Houses extends ActionBarActivity {
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+
+import baman.lankahomes.lk.magaelanga.SelectCoordinates;
+
+public class AddNewLocation extends ActionBarActivity {
+
     private Toolbar toolbar;
     public DrawerLayout drawerLayout;
     public ListView drawerList;
@@ -23,9 +38,7 @@ public class Houses extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String title = getIntent().getExtras().getString("activity_title");
-        setTitle(title);
-        setContentView(R.layout.activity_houses);
+        setContentView(R.layout.activity_add_new_location);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -37,7 +50,6 @@ public class Houses extends ActionBarActivity {
 
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -69,15 +81,8 @@ public class Houses extends ActionBarActivity {
             startActivity(i);
             return true;
         }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.addNewLocation){
-            Intent i = new Intent(getApplicationContext(),AddNewLocation.class);
-            startActivity(i);
-            return true;
-        }
 
 
         return super.onOptionsItemSelected(item);
     }
-
 }

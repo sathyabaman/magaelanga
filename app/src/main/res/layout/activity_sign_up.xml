@@ -15,8 +15,6 @@
     tools:context=".SignIn"
     android:background="@color/primaryColor">
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
