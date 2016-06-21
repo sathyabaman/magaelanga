@@ -26,44 +26,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
                 <TextView
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Distance Radius"
+                    android:text="This section not allowed in your country"
                     android:id="@+id/textView"
-                    android:layout_gravity="left|top"
-                    android:layout_marginTop="32dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
-
-
-                <EditText
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:ems="10"
-                    android:id="@+id/ET_radius"
-                    android:layout_alignBottom="@+id/textView"
-                    android:layout_toRightOf="@+id/textView"
-                    android:layout_marginLeft="53dp"
-                    android:layout_marginStart="53dp"
-                    android:maxLength="2"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="KM"
-                    android:id="@+id/km"
-                    android:textStyle="normal"
-                    android:textSize="12dp"
-                    android:layout_alignTop="@+id/textView"
-                    android:layout_toRightOf="@+id/ET_radius"
-                    android:layout_toEndOf="@+id/ET_radius" />
-
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp" />
             </RelativeLayout>
 
 

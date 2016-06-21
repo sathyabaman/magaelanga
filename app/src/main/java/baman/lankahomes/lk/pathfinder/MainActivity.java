@@ -36,9 +36,6 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main_screen);
 
-
-
-
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

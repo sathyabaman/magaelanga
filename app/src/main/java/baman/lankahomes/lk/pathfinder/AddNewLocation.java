@@ -1,40 +1,19 @@
 package baman.lankahomes.lk.pathfinder;
 
-
-
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-        import android.support.v4.app.NavUtils;
-        import android.support.v4.widget.DrawerLayout;
-        import android.support.v7.app.ActionBarActivity;
-        import android.os.Bundle;
-        import android.support.v7.widget.Toolbar;
+import android.support.v4.app.NavUtils;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
-        import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlacePicker;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
-
-import baman.lankahomes.lk.magaelanga.SelectCoordinates;
 
 public class AddNewLocation extends ActionBarActivity {
 
     private Toolbar toolbar;
-    public DrawerLayout drawerLayout;
-    public ListView drawerList;
     private navigationDrawerFragment drawerFragment;
     EditText sub_cordinates;
     EditText sub_title;
@@ -43,9 +22,20 @@ public class AddNewLocation extends ActionBarActivity {
     EditText sub_website;
 
 
+    public static final String PREF_FILE_Name = "testpref";
+    public static final String KEY_USER_LEARNED_DRAWER = "user_learned_drawer";
+    private DrawerLayout mDrawerLayout;
+    private boolean mUserLearnedDrawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /* ------------------- Block the navigation drawer at start ---------------------------------*/
+        mUserLearnedDrawer = true;
+        drawerFragment.saveToPreferences(this, KEY_USER_LEARNED_DRAWER, mUserLearnedDrawer+"");
+        /* ------------------------------------------------------------------------------------------*/
+
         setContentView(R.layout.activity_add_new_location);
 
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -55,6 +45,8 @@ public class AddNewLocation extends ActionBarActivity {
         drawerFragment = (navigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setup(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
+
+
 
         Intent intent = getIntent();
         String latlng = intent.getStringExtra("latlng");
@@ -71,7 +63,7 @@ public class AddNewLocation extends ActionBarActivity {
         sub_website = (EditText) findViewById(R.id.et_submit_website);
 
 
-
+        /* validating place name */
         String s1 = new_latlng.substring(1,4).replace(".", "");
         String s2 = placeName.substring(2,5).replace(".", "");
         Log.d("latlng : ", new_latlng);
@@ -79,20 +71,15 @@ public class AddNewLocation extends ActionBarActivity {
         Log.d("latlng : ", s1);
         Log.d("place  : ", s2);
 
-        if(!(s1.equals(s2) && s2.equals(s1))){
-            sub_title.setText(placeName);
-        }
-
+        /* Asigning values to text box */
         sub_cordinates.setText(new_latlng);
-        sub_address.setText(address);
-        sub_phone.setText(phone);
-        if(!(website.equals("null"))){
-                    sub_website.setText(website);
-        }
-
-
+        if(!(s1.equals(s2) && s2.equals(s1))){sub_title.setText(placeName); }
+        if(!(address.equals("null"))) {sub_address.setText(address); }
+        if(!(phone.equals("null"))) {sub_phone.setText(phone); }
+        if(!(website.equals("null"))){sub_website.setText(website); }
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
