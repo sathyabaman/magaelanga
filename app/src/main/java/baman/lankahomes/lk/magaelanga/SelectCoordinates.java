@@ -75,6 +75,12 @@ public class SelectCoordinates extends FragmentActivity implements OnMapReadyCal
                 Log.d("locale : ", locale);
                 Log.d("placeURI : ", placeURI);
                 Intent i = new Intent(getApplicationContext(),AddNewLocation.class);
+                i.putExtra("latlng",latlng);
+                i.putExtra("address",address);
+                i.putExtra("placeName",placeName);
+                i.putExtra("phonenumber",phonenumber);
+                i.putExtra("rating",rating);
+                i.putExtra("placeURI",placeURI);
                 startActivity(i);
             }
         }
